@@ -1,0 +1,11 @@
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+
+        needSize = len(needle)
+        s = len(haystack)
+    
+        for index in range(s):
+            if haystack[index:index + needSize] == needle:
+                return index
+
+        return -1
