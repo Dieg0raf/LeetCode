@@ -1,0 +1,12 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        dupDict = {}
+
+        for i in range(len(nums)):
+            if nums[i] in dupDict.keys():
+                return True
+            elif nums[i] not in dupDict.keys():
+                dupDict[nums[i]] = i
+
+        return False
