@@ -1,0 +1,11 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictNum = {}
+
+        for i in range(len(nums)):
+            comp = target - nums[i]
+            if comp in dictNum.keys():
+                return [dictNum[comp], i]
+
+            if i not in dictNum.values():
+                dictNum[nums[i]] = i
